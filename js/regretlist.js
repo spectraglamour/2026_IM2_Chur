@@ -71,24 +71,25 @@ function renderRegretList() {
   const savedAnimals = getRegretList();
 
   if (savedAnimals.length === 0) {
-    listElement.innerText = "Noch keine Tiere in deiner Regret List.";
+    listElement.innerText = "no regrets, huh? You're everything I thought you would be..";
     return;
   }
 
   savedAnimals.forEach(animal => {
     const card = document.createElement("div");
+    card.classList.add("regret-card");
 
     const title = document.createElement("h2");
-    title.innerText = animal.binomialName;
+    title.innerText = animal.lastRecord;
 
     const lastRecord = document.createElement("p");
-    lastRecord.innerText = `Letzter Nachweis: ${animal.lastRecord}`;
+    lastRecord.innerText = animal.binomialName;
 
     const location = document.createElement("p");
-    location.innerText = `Ort: ${animal.location}`;
+    location.innerText = `last located in ${animal.location}`;
 
     card.appendChild(title);
-    card.appendChild(lastRecord);
+    card.appendChild(name);
     card.appendChild(location);
 
     listElement.appendChild(card);

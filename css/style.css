@@ -7,4 +7,34 @@
 
 body {
     background-color: pink;
+    font-family: Finger Paint;
+}
+
+
+/* für die regretlist */
+.regret-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  font-size: 100px;
+}
+
+.regret-card {
+  background-color: pink;
+  border: 3px solid #ff0000;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 180px;
+}
+
+.regret-card h2 { /* binomalName*/
+    font-family: Joti One;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.regret-card p { /* location und lastRecord*/
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 8px;
 }
