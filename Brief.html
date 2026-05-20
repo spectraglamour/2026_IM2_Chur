@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Briefpapier geöffnet</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f7e8c5;
+      color: #2c2c2c;
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px 40px;
+    }
+
+    .paper {
+      background: #fff8dc;
+      border: 2px solid #dcc99b;
+      box-shadow: 0 22px 46px rgba(0, 0, 0, 0.12);
+      padding: 34px;
+      position: relative;
+    }
+
+    .top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .note {
+      margin: 0;
+      color: #bf2f2f;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .human-label {
+      color: #7c6b36;
+      font-size: 0.95rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      line-height: 1.05;
+      color: #58651c;
+      letter-spacing: 0.04em;
+    }
+
+    .body-text {
+      margin: 18px 0 0;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 720px;
+    }
+
+    .hero {
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 28px 0 16px;
+    }
+
+    .left-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 280px;
+      min-width: 220px;
+      align-items: flex-start;
+    }
+
+    .dino-wrap {
+      width: 240px;
+      min-width: 190px;
+      margin-left: -18px;
+    }
+
+    .dino-wrap img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      transform: scaleX(-1);
+    }
+
+    .speech {
+      position: relative;
+      width: 200px;
+      min-width: 180px;
+      margin-left: auto;
+      margin-right: -10px;
+    }
+
+    .speech img {
+      width: 100%;
+      display: block;
+    }
+
+    .speech-text {
+      position: absolute;
+      top: 26%;
+      left: 24%;
+      width: 60%;
+      font-size: 0.92rem;
+      color: #2f2f2f;
+      line-height: 1.35;
+    }
+
+    .right-panel {
+      flex: 1;
+      min-width: 320px;
+      max-width: 520px;
+    }
+
+    .screenshot {
+      position: relative;
+      width: 100%;
+      min-height: 240px;
+      border-radius: 24px;
+      background: #f7f2d9;
+      border: 1px solid #e1d3a5;
+      padding: 18px;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+    }
+
+    .screenshot::before {
+      content: "";
+      display: block;
+      padding-top: 58%;
+    }
+
+    .screenshot-placeholder {
+      position: absolute;
+      inset: 18px 18px 72px;
+      border-radius: 16px;
+      background: #fffdfa;
+      border: 1px solid #e7dfb0;
+    }
+
+    .screenshot-text {
+      position: absolute;
+      left: 50%;
+      top: 46%;
+      transform: translate(-50%, -50%);
+      width: 86%;
+      text-align: center;
+      color: #7e6b4c;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .screenshot img {
+      position: absolute;
+      width: 76px;
+      right: 18px;
+      top: 18px;
+      display: block;
+    }
+
+    .kill-button {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      width: 140px;
+    }
+
+    .evolution {
+      width: 100%;
+      display: block;
+      margin: 30px auto 20px;
+    }
+
+    .heart-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .heart-wrap img {
+      width: 100%;
+      max-width: 760px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .heart-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7a1f32;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+      pointer-events: none;
+      padding: 0 18px;
+    }
+
+    .footer {
+      margin-top: 26px;
+      text-align: center;
+    }
+
+    .footer img {
+      max-width: 280px;
+      width: 100%;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <article class="paper">
+      <div class="top-meta">
+        <p class="note">#Avoid humans</p>
+        <div class="human-label">Humans = ☠️</div>
+      </div>
+
+      <h1>IT'S YOUR FAULT !</h1>
+      <p class="body-text">Hello, my name is Dino and I am dead. Luckily I didn’t die because of you. Let me tell you
+        who did.</p>
+
+      <div class="hero">
+        <div class="left-panel">
+          <div class="speech">
+            <img src="SVGs/sprechblase.svg" alt="Sprechblase">
+            <div class="speech-text">This is the Mergus australis.</div>
+          </div>
+
+          <div class="dino-wrap">
+            <img src="SVGs/dino.gif" alt="Dino">
+          </div>
+        </div>
+
+        <div class="right-panel">
+          <div class="screenshot">
+            <div class="screenshot-placeholder"></div>
+            <div class="screenshot-text">A screenshot of the investigation page would be shown here.</div>
+            <img src="SVGs/regret.png" alt="Kleines Männlein">
+            <img class="kill-button" src="SVGs/killagainbutton.svg" alt="Kill again button">
+          </div>
+        </div>
+      </div>
+
+      <img class="evolution" src="SVGs/humanshit.svg" alt="Menschen evolution">
+
+      <div class="heart-wrap">
+        <img src="SVGs/brokenheart.svg" alt="Broken heart">
+        <div class="heart-text">Open Your Regret-List</div>
+      </div>
+
+      <div class="footer">
+        <img src="SVGs/beashamedbutton.svg" alt="Close letter and be ashamed">
+      </div>
+    </article>
+  </div>
+</body>
+
+</html>
