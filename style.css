@@ -14,7 +14,7 @@ body {
 .paper {
   position: relative;
   width: 100%;
-  min-height: 1600px;
+  min-height: 2000px;
   background: #fff0c8;
   overflow: hidden;
   padding: 20px 20px 40px;
@@ -27,7 +27,7 @@ body {
 
 .note {
   position: absolute;
-  top: 180px;
+  top: 200px;
   left: 16px;
   margin: 0;
   color: #d96b6b;
@@ -49,9 +49,9 @@ body {
 
 h1 {
   text-align: center;
-  margin: 10px 0 20px;
+margin: 10px 0 60px;
   color: #56691f;
-  font-size: 30px;
+  font-size: 50px;
   letter-spacing: 1px;
 }
 
@@ -60,7 +60,7 @@ h1 {
   margin: 0 auto;
   width: 100%;
   max-width: 700px;
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.35;
 }
 
@@ -159,7 +159,7 @@ h1 {
 .evolution {
   display: block;
   width: 100%;
-  margin: 40px auto 90px;
+  margin: 160px auto 190px;
 }
 
 .heart-wrap {
@@ -185,7 +185,7 @@ h1 {
 
 .footer {
   text-align: center;
-  margin-top: 45px;
+  margin-top: 150px;
 }
 
 .footer img {
@@ -202,15 +202,17 @@ h1 {
 
 @media (max-width: 600px) {
 
-  h1 {
-    font-size: 38px;
-    margin-top: 25px;
-  }
+h1 {
+  font-size: 38px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
 
-  .body-text {
-    font-size: 18px;
-    padding: 0 20px;
-  }
+.body-text {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 20px;
+}
 
   .hero {
     height: 320px;
@@ -259,8 +261,8 @@ h1 {
   }
 
   .evolution {
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 150px;
+    margin-bottom: 150px;
   }
 
   .heart-wrap {
@@ -348,4 +350,16 @@ h1 {
     bottom: -30px;
     right: 0;
   }
+
+  @media (max-width: 600px) {
+
+  .note {
+    font-size: 10px;
+  }
+
+  .humans {
+    font-size: 10px;
+  }
+
+}
 }
