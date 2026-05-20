@@ -6,9 +6,10 @@
 
 
 body {
-    background-color: pink;
     font-family: Finger Paint;
+    background-color: #f7e8c5;
 }
+
 
 
 /* für die regretlist */
@@ -18,6 +19,7 @@ body {
   gap: 20px;
   font-size: 100px;
 }
+
 
 .regret-card {
   background-color: pink;
