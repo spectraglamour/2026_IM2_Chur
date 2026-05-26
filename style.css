@@ -49,7 +49,7 @@ body {
 
 h1 {
   text-align: center;
-margin: 10px 0 60px;
+  margin: 10px 0 60px;
   color: #56691f;
   font-size: 50px;
   letter-spacing: 1px;
@@ -362,4 +362,12 @@ h1 {
   }
 
 }
+}
+
+#list {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertikal */
+  text-align: center;
 }

@@ -40,3 +40,28 @@ body {
   line-height: 1.4;
   margin-bottom: 8px;
 }
+
+h1 { /* regret list */
+  text-align: center;
+  padding-top: 25px;
+  color: #ff0000;
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+}
+
+#list {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertikal */
+  text-align: center;
+}
+
+.empty-regret-text { /* no regrets huh? */
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+  color: red;
+}

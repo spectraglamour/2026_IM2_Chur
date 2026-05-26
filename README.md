@@ -1,5 +1,1 @@
-# IM2
-
-## Hallo Nyah.
-
-hallo Leonie.
+# IM2 Arbeitsreflexion
