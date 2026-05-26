@@ -71,6 +71,7 @@ function renderRegretList() {
   const savedAnimals = getRegretList();
 
   if (savedAnimals.length === 0) {
+    listElement.classList.add("empty-regret-text");
     listElement.innerText = "no regrets, huh? You're everything I thought you would be..";
     return;
   }
