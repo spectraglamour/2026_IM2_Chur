@@ -2,18 +2,18 @@
 <html lang="de">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
 
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
 
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
 
 
 
@@ -21,54 +21,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brief geöffnet</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="margin:0; min-height:100vh; display:flex; justify-content:center; align-items:center; background:#ffffff;">
-    <svg viewBox="0 0 900 700" style="width:100%; max-width:900px; height:auto; display:block;">
-        <defs>
-            <linearGradient id="letterShade" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#fff6dc" />
-                <stop offset="100%" stop-color="#f4e3bb" />
-            </linearGradient>
-            <radialGradient id="sealGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#dddddd" stop-opacity="0.9" />
-                <stop offset="100%" stop-color="#bbbbbb" stop-opacity="0.6" />
-            </radialGradient>
-        </defs>
+<body>
+    <main class="open-page">
 
-        <rect x="0" y="0" width="900" height="700" fill="#ffffff" />
+        <div class="envelope">
 
-        <g opacity="0.9">
-            <path
-                d="M450 40 l90 42 a20 20 0 0 1 18 26 l-12 34 a20 20 0 0 1 -26 12 l-90 -42 -90 42 a20 20 0 0 1 -26 -12 l-12 -34 a20 20 0 0 1 18 -26 z"
-                fill="url(#sealGlow)" />
-        </g>
+            <div class="letter">
+                <h1>IT'S YOUR FAULT</h1>
 
-        <polygon points="0,320 450,0 900,320 900,320 0,320" fill="#ffffff" stroke="#222" stroke-width="2" />
-        <polygon points="0,320 450,550 900,320 900,700 0,700" fill="#f24a45" stroke="#222" stroke-width="2" />
+                <p>
+                    Hello, my name is Dino and I am dead.<br>
+                    Let me tell you who did.
+                </p>
+            </div>
 
-        <polygon points="120,320 780,320 680,140 220,140" fill="url(#letterShade)" stroke="#b59c5b" stroke-width="2" />
-        <path d="M120 320 L120 330 L780 330 L780 320" fill="#ffffff" />
+            <div class="front-flap"></div>
 
-        <text x="450" y="240" text-anchor="middle" fill="#54601a" font-family="Arial, sans-serif" font-size="64"
-            font-weight="700" letter-spacing="2">
-            IT'S YOUR FAULT
-        </text>
-        <text x="450" y="310" text-anchor="middle" fill="#2f2f2f" font-family="Arial, sans-serif" font-size="22">
-            i’m dead. i was never meant to stay.
-        </text>
-        <text x="450" y="345" text-anchor="middle" fill="#2f2f2f" font-family="Arial, sans-serif" font-size="18">
-            this page is a letter that has just been opened.
-        </text>
+        </div>
 
-        <line x1="140" y1="380" x2="760" y2="380" stroke="#b9a16a" stroke-width="1.5" />
-        <line x1="140" y1="410" x2="760" y2="410" stroke="#b9a16a" stroke-width="1.5" />
-        <line x1="140" y1="440" x2="760" y2="440" stroke="#b9a16a" stroke-width="1.5" />
-
-        <text x="720" y="180" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="18" text-anchor="end">
-            H.E.L.P.
-        </text>
-    </svg>
+    </main>
 </body>
 
 </html>
