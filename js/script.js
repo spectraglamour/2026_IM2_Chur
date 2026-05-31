@@ -30,8 +30,13 @@ const hateSentences = [
   "Humans ruin everything.",
   "Another one gone. Great job.",
   "You call this progress?",
-  "Maybe stop destroying everything you touch."
+  "Maybe stop destroying everything you touch.",
+  "You're laughing - hes not.",
+  "I dont even have words for how much I hate you right now.",
+  "You, yeah you, human, you are a Looooooser."
 ];
+
+let lastHateSentence = "";
 
 function getAnimalName(animal) {
   return animal.commonName || animal.binomialName || "this poor creature";
@@ -47,8 +52,18 @@ function updateSpeech() {
   } else if (speechStep === 1) {
     speechText.innerText = `This species was last recorded in ${currentAnimal.lastRecord}.`;
   } else {
-    const randomSentence = hateSentences[Math.floor(Math.random() * hateSentences.length)];
-    speechText.innerText = randomSentence;
+let randomSentence;
+
+do {
+  randomSentence =
+    hateSentences[Math.floor(Math.random() * hateSentences.length)];
+} while (
+  hateSentences.length > 1 &&
+  randomSentence === lastHateSentence
+);
+
+lastHateSentence = randomSentence;
+speechText.innerText = randomSentence;
   }
 }
 
