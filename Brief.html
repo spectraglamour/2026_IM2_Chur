@@ -46,22 +46,32 @@
 
       <div class="hero">
         <div class="left-panel">
+
           <div class="speech">
-            <img src="SVGs/sprechblase.svg" alt="Sprechblase">
-            <div class="speech-text">This is the Mergus australis.</div>
+            <img class="speech-bubble-img" src="SVGs/sprechblase.svg" alt="Sprechblase">
+
+            <div id="speechText" class="speech-text">
+              This is the Mergus australis.
+            </div>
+
+            <img id="speechNext" class="speech-next" src="svgs/pfeil.svg" alt="next">
           </div>
 
           <div class="dino-wrap">
             <img src="SVGs/dino.gif" alt="Dino">
           </div>
+
         </div>
 
         <div class="right-panel">
           <div class="screenshot">
-            <div class="screenshot-placeholder"></div>
-            <div class="screenshot-text">A screenshot of the investigation page would be shown here.</div>
+            <iframe id="animalFrame" class="animal-frame" src="https://en.wikipedia.org/wiki/Auckland_merganser"
+              title="Wikipedia page about extinct animal">
+            </iframe>
+
             <img id="regretIcon" class="regret-icon" src="SVGs/regret.svg" data-white="SVGs/regret.svg"
               data-black="SVGs/regretblack.svg" alt="Add to regret list">
+
             <img class="kill-button" src="SVGs/killagainbutton.svg" alt="Kill again button">
           </div>
         </div>

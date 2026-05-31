@@ -94,7 +94,7 @@ h1 {
   z-index: 3;
 }
 
-.speech img {
+.speech-bubble-img {
   width: 100%;
   display: block;
 }
@@ -217,6 +217,27 @@ h1 {
 
 .footer img {
   width: 340px;
+}
+
+.animal-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.speech {
+  position: absolute;
+}
+
+.speech-next {
+  position: absolute;
+  width: 28px;
+  height: auto;
+  right: 26px;
+  bottom: 36px;
+  cursor: pointer;
+  z-index: 5;
 }
 
 /* Responsive Anpassungen */
