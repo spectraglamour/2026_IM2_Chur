@@ -1,11 +1,3 @@
-const heartWrap = document.querySelector(".heart-wrap");
-
-if (heartWrap) {
-  heartWrap.addEventListener("click", () => {
-    window.location.href = "regretlist.html";
-  });
-}
-
 const regretIcon = document.querySelector("#regretIcon");
 
 if (regretIcon) {
@@ -22,6 +14,10 @@ if (regretIcon) {
   });
 }
 
-killButton.addEventListener("click", () => {
-  console.log("kill again");
-});
+const killButton = document.querySelector(".kill-button");
+
+if (killButton) {
+  killButton.addEventListener("click", () => {
+    console.log("kill again");
+  });
+}

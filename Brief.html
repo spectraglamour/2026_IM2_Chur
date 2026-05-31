@@ -22,6 +22,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Briefpapier geöffnet</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -68,8 +69,9 @@
 
       <img class="evolution" src="SVGs/humanshit.svg" alt="Menschen evolution">
 
-      <div class="heart-wrap">
-        <img src="SVGs/brokenheart.svg" alt="Broken heart">
+      <div class="heart-wrap" id="heartButton">
+        <img id="heartImage" src="SVGs/brokenheart.svg" alt="Broken heart">
+        <div id="heartAnimation"></div>
       </div>
 
       <a class="footer" href="brief_geschlossen.html">
@@ -78,6 +80,35 @@
 
     </article>
   </div>
+
+  <script>
+    const heartButton = document.getElementById("heartButton");
+    const heartImage = document.getElementById("heartImage");
+    const heartAnimationContainer = document.getElementById("heartAnimation");
+
+    let heartClicked = false;
+
+    heartButton.addEventListener("click", () => {
+      if (heartClicked) return;
+      heartClicked = true;
+
+      heartImage.style.display = "none";
+      heartAnimationContainer.style.display = "block";
+
+      const animation = lottie.loadAnimation({
+        container: heartAnimationContainer,
+        renderer: "svg",
+        loop: false,
+        autoplay: true,
+        path: "svgs/brokenheartdesktop.json"
+      });
+
+      animation.addEventListener("complete", () => {
+        window.location.href = "regretlist.html";
+      });
+    });
+  </script>
+
   <script src="js/script.js" type="module"></script>
 </body>
 

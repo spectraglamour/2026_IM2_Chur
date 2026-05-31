@@ -89,7 +89,7 @@ h1 {
   width: 55%;
   max-width: 260px;
   min-width: 110px;
-  left: 45%;
+  left: 55%;
   top: -15%;
   z-index: 3;
 }
@@ -173,6 +173,20 @@ h1 {
 .heart-wrap img {
   width: 100%;
   display: block;
+}
+
+.heart-wrap {
+  cursor: pointer;
+}
+
+#heartAnimation {
+  display: none;
+  width: 100%;
+}
+
+#heartAnimation svg {
+  width: 100%;
+  height: auto;
 }
 
 .heart-text {
@@ -314,10 +328,31 @@ h1 {
   text-align: center;
 }
 
+.heart-wrap {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+#heartAnimation {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  margin: 100px auto 10px;
+  text-align: center;
+  display: block;
+  width: fit-content;
+}
+
 
 .footer img {
-  width: 230px;
-  max-width: 70%;
+  width: 350px;
+  max-width: 85%;
 }
 }
 #list {
@@ -361,49 +396,30 @@ body {
 
 .letter {
   position: absolute;
-
   width: 720px;
   height: 260px;
   left: 50%;
-  top: 60px;
+  top: 70px;
   transform: translateX(-50%);
   background: #efe2b8;
   border: 1px solid #b89e58;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 24%,
-    50% 68%,
-    0 24%
-  );
+  clip-path: none;
 }
 
 
 .front-flap {
   position: absolute;
-
   left: 0;
   right: 0;
   bottom: 0;
-
-  height: 430px;
-
+  height: 300px;
   background: #ff4b54;
-
-  clip-path: polygon(
-    0 0,
-    50% 40%,
-    100% 0,
-    100% 100%,
-    0 100%
-  );
-
-  border-top: 1px solid #111;
-
+  clip-path: polygon(0 0, 50% 40%, 100% 0, 100% 100%, 0 100%);
   z-index: 5;
 }
+
 
 .letter h1 {
   font-family: "Finger Paint", cursive;
@@ -417,24 +433,167 @@ body {
   font-size: 22px;
 }
 
-.envelope::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 20;
 
-    background:
-      linear-gradient(
-        to bottom right,
-        transparent 49.9%,
-        #111 50%,
-        transparent 50.1%
-      ),
-      linear-gradient(
-        to bottom left,
-        transparent 49.9%,
-        #111 50%,
-        transparent 50.1%
-      );
+/* ---------- BRIEF GESCHLOSSEN ---------- */
+
+.closed-page {
+  margin: 0;
+  background: #ececec;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closed-envelope {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  background: #ff4b54;
+  border: 1px solid #111;
+  overflow: hidden;
+}
+
+.closed-envelope::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom right, transparent 49.8%, rgba(0,0,0,0.18) 50%, transparent 50.2%),
+    linear-gradient(to bottom left, transparent 49.8%, rgba(0,0,0,0.18) 50%, transparent 50.2%);
+}
+
+.closed-from,
+.closed-to {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff2b0;
+  font-family: "Finger Paint", cursive;
+  font-size: 52px;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+.closed-from {
+  top: 70px;
+}
+
+.closed-to {
+  bottom: 70px;
+}
+
+.wax-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.wax-link img {
+  width: 170px;
+  display: block;
+}
+
+.wax-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.wax-link img {
+  width: 170px;
+  display: block;
+}
+
+.wax-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  font-family: "Finger Paint", cursive;
+  font-size: 28px;
+  line-height: 1.25;
+  color: black;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* Mobile für offen und geschlossen */
+
+/* ---------- RESPONSIVE: UMSCHLÄGE ---------- */
+
+@media (max-width: 600px) {
+  .closed-envelope,
+  .envelope {
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .closed-from,
+  .closed-to {
+    font-size: 28px;
+  }
+
+  .closed-from {
+    top: 35px;
+  }
+
+  .closed-to {
+    bottom: 35px;
+  }
+
+  .wax-link img {
+    width: 95px;
+  }
+
+  .wax-text {
+    font-size: 16px;
+  }
+
+  .letter {
+    width: 80%;
+    height: 52%;
+    top: 14%;
+  }
+
+  .letter h1 {
+    font-size: 26px;
+    margin-top: 18px;
+  }
+
+  .letter p {
+    font-size: 10px;
+  }
+
+  .front-flap {
+    height: 60%;
+  }
+}
+
+
+/* next*/
+
+.letter.fly-out {
+  animation: flyOutLetter 0.6s ease-in forwards;
+}
+
+@keyframes flyOutLetter {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-520px) scale(1.15);
+    opacity: 0;
+  }
 }
