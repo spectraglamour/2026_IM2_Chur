@@ -8,6 +8,7 @@
 body {
     font-family: Finger Paint;
     background-color: #f7e8c5;
+    position: relative;
 }
 
 
@@ -22,16 +23,21 @@ body {
 
 
 .regret-card {
+  width: 320px;
+  height: 480px;
   background-color: pink;
   border: 3px solid #ff0000;
   border-radius: 8px;
   padding: 20px;
-  min-height: 180px;
+  text-align: center;
+  overflow: hidden;
 }
 
 .regret-card h2 { /* binomalName*/
-    font-family: Joti One;
-  font-size: 22px;
+  font-family: Joti One;
+  font-size: 50px;
+  line-height: 1.05;
+  min-height: 2.1em;
   margin-bottom: 12px;
 }
 
@@ -41,20 +47,100 @@ body {
   margin-bottom: 8px;
 }
 
-h1 { /* regret list */
+h2 { /* regret list */
   text-align: center;
-  padding-top: 25px;
-  color: #ff0000;
-  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  -webkit-text-stroke: 0.5px;
+  color: #596413;
+}
+
+.titel_regretlist {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.titel_regretlist img {
+  width: 650px;
+}
+
+.background-note {
+  position: absolute;
+  top: 115px;
+  right: 44px;
+  transform: rotate(-7deg);
+  max-width: 45vw;
+  color: #8c7b66;
+  font-family: "Grape Nuts", cursive;
+  font-size: 20px;
+  line-height: 1;
+  text-align: right;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.skull-icon {
+  width: 150px;
+  display: block;
+  margin: 0 auto 12px;
 }
 
 #list {
   min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
+  justify-content: center;
+  align-items: start;
+  gap: 24px;
+  text-align: center;
+  padding: 190px 40px 60px;
+}
+
+.animal-info-box {
+  width: 100%;
+  max-width: 260px;
+  height: 220px;
+  background-color: #f7e8c5;
+  border: 3px solid #000000;
+  border-radius: 8px;
+  padding: 12px 12px;
+  margin: 0 auto 10px;
   display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertikal */
+  flex-direction: column;
   text-align: center;
 }
+
+.animal-info-box p {
+  margin-bottom: 8px;
+}
+
+.animal-info-box p:last-child {
+  margin-bottom: 0;
+}
+
+.regret-card .binomial-name {
+  font-family: "Joti One";
+  font-size: 25px;
+  margin-top: 4px;
+}
+
+.regret-card .location-text {
+  font-size: 20px;
+  justify-content: center;
+}
+
+.location-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.location-icon {
+  width:24px;
+  height: auto;
+  flex-shrink: 0;
+}
+
 
 .empty-regret-text { /* no regrets huh? */
   display: flex;
@@ -63,5 +149,60 @@ h1 { /* regret list */
   text-align: center;
   font-size: 50px;
   color: red;
+  
+  min-width: 350px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0 20px 30px;
+}
+
+.regret-more img {
+  width: 250px;
+  max-width: 85vw;
+  transition: transform 0.2s ease;
+}
+
+.regret-more:hover img {
+  content: url("../SVGs/hover/hoverregretmorebutton.svg");
+  transform: scale(1.05);
+}
+
+
+.footer {
+  display: block;
+}
+
+.footer img {
+  content: url("/SVGs/beashamedbutton.svg");
+  width: 340px;
+  max-width: 85vw;
+  transition: transform 0.2s ease;
+}
+
+.footer:hover img {
+  content: url("../SVGs/hover/hoverbeashamedbutton.svg");
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 700px) {
+  .regret-card {
+    width: min(320px, 90vw);
+    height: auto;
+    aspect-ratio: 320 / 480;
+  }
+
+  #list {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    padding: 190px 20px 60px;
+  }
+}

@@ -13,9 +13,6 @@ console.log(loadAnimals);
 const list = document.querySelector("#list");
 
 
-//fehler mit data.lastRecord
-localStorage.removeItem("regretList");
-
 //chat, js für regret list
 const STORAGE_KEY = "regretList";
 const url = "https://extinct-api.herokuapp.com/api/v1/animal/";
@@ -77,21 +74,41 @@ function renderRegretList() {
   }
 
   savedAnimals.forEach(animal => {
+    const skull = document.createElement("img");
+    skull.classList.add("skull-icon");
+    skull.src = "SVGs/totenkopf.png";
+    skull.alt = "Totenkopf";  
+
     const card = document.createElement("div");
     card.classList.add("regret-card");
 
     const title = document.createElement("h2");
     title.innerText = animal.lastRecord;
 
+    const infoBox = document.createElement("div");
+    infoBox.classList.add("animal-info-box");
+
     const lastRecord = document.createElement("p");
+    lastRecord.classList.add("binomial-name");
     lastRecord.innerText = animal.binomialName;
 
     const location = document.createElement("p");
-    location.innerText = `last located in ${animal.location}`;
+    location.classList.add("location-text");
 
+    const locationIcon = document.createElement("img");
+    locationIcon.classList.add("location-icon");
+    locationIcon.src = "SVGs/pin.svg";
+    locationIcon.alt = "Location";
+
+    location.appendChild(locationIcon);
+    location.append(`last located in ${animal.location}`);
+
+    infoBox.appendChild(lastRecord);
+    infoBox.appendChild(location);  
+
+    card.appendChild(skull);
     card.appendChild(title);
-    card.appendChild(name);
-    card.appendChild(location);
+    card.appendChild(infoBox);
 
     listElement.appendChild(card);
   });

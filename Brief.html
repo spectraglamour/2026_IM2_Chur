@@ -22,6 +22,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Briefpapier geöffnet</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -45,21 +46,32 @@
 
       <div class="hero">
         <div class="left-panel">
+
           <div class="speech">
-            <img src="SVGs/sprechblase.svg" alt="Sprechblase">
-            <div class="speech-text">This is the Mergus australis.</div>
+            <img class="speech-bubble-img" src="SVGs/sprechblase.svg" alt="Sprechblase">
+
+            <div id="speechText" class="speech-text">
+              This is the Mergus australis.
+            </div>
+
+            <img id="speechNext" class="speech-next" src="svgs/pfeil.svg" alt="next">
           </div>
 
           <div class="dino-wrap">
             <img src="SVGs/dino.gif" alt="Dino">
           </div>
+
         </div>
 
         <div class="right-panel">
           <div class="screenshot">
-            <div class="screenshot-placeholder"></div>
-            <div class="screenshot-text">A screenshot of the investigation page would be shown here.</div>
-            <img src="SVGs/regret.png" alt="Kleines Männlein">
+            <iframe id="animalFrame" class="animal-frame" src="https://en.wikipedia.org/wiki/Auckland_merganser"
+              title="Wikipedia page about extinct animal">
+            </iframe>
+
+            <img id="regretIcon" class="regret-icon" src="SVGs/regret.svg" data-white="SVGs/regret.svg"
+              data-black="SVGs/regretblack.svg" alt="Add to regret list">
+
             <img class="kill-button" src="SVGs/killagainbutton.svg" alt="Kill again button">
           </div>
         </div>
@@ -67,17 +79,47 @@
 
       <img class="evolution" src="SVGs/humanshit.svg" alt="Menschen evolution">
 
-      <div class="heart-wrap">
-        <img src="SVGs/brokenheart.svg" alt="Broken heart">
+      <div class="heart-wrap" id="heartButton">
+        <img id="heartImage" src="SVGs/brokenheart.svg" alt="Broken heart">
+        <div id="heartAnimation"></div>
       </div>
 
-      <div class="footer">
+      <a class="footer" href="brief_geschlossen.html">
         <img src="SVGs/beashamedbutton.svg" alt="Close letter and be ashamed">
-      </div>
+      </a>
 
     </article>
   </div>
-<script src="js/script.js" type="module"></script>
+
+  <script>
+    const heartButton = document.getElementById("heartButton");
+    const heartImage = document.getElementById("heartImage");
+    const heartAnimationContainer = document.getElementById("heartAnimation");
+
+    let heartClicked = false;
+
+    heartButton.addEventListener("click", () => {
+      if (heartClicked) return;
+      heartClicked = true;
+
+      heartImage.style.display = "none";
+      heartAnimationContainer.style.display = "block";
+
+      const animation = lottie.loadAnimation({
+        container: heartAnimationContainer,
+        renderer: "svg",
+        loop: false,
+        autoplay: true,
+        path: "svgs/brokenheartdesktop.json"
+      });
+
+      animation.addEventListener("complete", () => {
+        window.location.href = "regretlist.html";
+      });
+    });
+  </script>
+
+  <script src="js/script.js" type="module"></script>
 </body>
 
 </html>
