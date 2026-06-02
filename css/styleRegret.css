@@ -11,17 +11,6 @@ body {
     position: relative;
 }
 
-
-
-/* für die regretlist */
-.regret-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  font-size: 100px;
-}
-
-
 .regret-card {
   width: 320px;
   height: 480px;

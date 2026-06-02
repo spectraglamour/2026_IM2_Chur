@@ -26,15 +26,41 @@ let animals = [];
 let currentAnimal = null;
 let speechStep = 0;
 
+const STORAGE_KEY = "regretList";
+
+function getRegretList() {
+  return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+}
+
+function saveRegretList(list) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+}
+
+function addAnimalToRegretList(animal) {
+  if (!animal) return;
+
+  const list = getRegretList();
+
+  const alreadyExists = list.some(savedAnimal => {
+    return savedAnimal && savedAnimal.binomialName === animal.binomialName;
+  });
+
+  if (!alreadyExists) {
+    list.push(animal);
+    saveRegretList(list);
+  }
+}
+
 const hateSentences = [
   "You didn't have to kill it.",
   "Humans ruin everything.",
   "Another one gone. Great job.",
   "You call this progress?",
   "Maybe stop destroying everything you touch.",
-  "You're laughing - hes not.",
   "I dont even have words for how much I hate you right now.",
-  "You, yeah you, human, you are a Looooooser."
+  "You, yeah you, human, you are a Looooooser.",
+  "You're a heartless creature",
+  "You are brutal, thank you for nothing."
 ];
 
 let lastHateSentence = "";
@@ -116,24 +142,3 @@ if (speechNext) {
 }
 
 loadAnimals();
-
-function getRegretList() {
-  return JSON.parse(localStorage.getItem("regretList")) || [];
-}
-
-function saveRegretList(list) {
-  localStorage.setItem("regretList", JSON.stringify(list));
-}
-
-function addAnimalToRegretList(animal) {
-  const list = getRegretList();
-
-  const alreadyExists = list.some(savedAnimal => {
-    return savedAnimal && animal && savedAnimal.binomialName === animal.binomialName;
-  });
-
-  if (!alreadyExists) {
-    list.push(animal);
-    saveRegretList(list);
-  }
-}
