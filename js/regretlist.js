@@ -46,8 +46,12 @@ function renderRegretList() {
     locationIcon.src = "svgs/pin.svg";
     locationIcon.alt = "Location";
 
+    const locationLabel = document.createElement("span");
+    locationLabel.classList.add("location-label");
+    locationLabel.innerText = `last located in ${animal.location}`;
+
     location.appendChild(locationIcon);
-    location.append(`last located in ${animal.location}`);
+    location.appendChild(locationLabel);
 
     infoBox.appendChild(lastRecord);
     infoBox.appendChild(location);  
@@ -57,6 +61,11 @@ function renderRegretList() {
     card.appendChild(infoBox);
 
     listElement.appendChild(card);
+
+    const locationLineHeight = parseFloat(getComputedStyle(location).lineHeight);
+    if (location.scrollHeight > locationLineHeight * 3.3) {
+      location.classList.add("location-small");
+    }
   });
 }
 

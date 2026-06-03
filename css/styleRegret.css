@@ -117,17 +117,28 @@ h2 { /* regret list */
   justify-content: center;
 }
 
+.regret-card .location-text.location-small {
+  font-size: 16px;
+}
+
 .location-text {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
+  line-height: 1.2;
 }
 
 .location-icon {
   width:24px;
   height: auto;
   flex-shrink: 0;
+}
+
+.location-label {
+  min-width: 0;
+  max-width: calc(100% - 30px);
+  overflow-wrap: anywhere;
 }
 
 
