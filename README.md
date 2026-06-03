@@ -9,7 +9,7 @@ Die Grundidee unserer Website ist, dass ein Dino die Menschen hasst, weil er sie
 
 Der Dino schreibt seinen Feinden einen Brief, der zuerst noch relativ harmlos wirkt, sich dann aber immer mehr als Werk eines Human-Haters herauskristallisiert. Die ganze Website ist deshalb wie ein Brief aufgebaut: Man öffnet zuerst den Umschlag und gelangt danach auf die eigentliche Briefseite, auf der der Dino seine Wut auf die Menschen ausdrückt.
 
-Die Arbeit soll vor allem lustig sein und nicht zu ernst genommen werden. Uns war wichtig, dass die Website eine ironische, absurde und sarkastische Stimmung hat. Schon bei der Konzeption hatten wir viel Spass, und auch beim Coden haben wir uns über jeden funktionierenden Schritt gefreut.
+Die Arbeit soll vor allem lustig sein und nicht zu ernst genommen werden. Uns war wichtig, dass die Website eine absurde und sarkastische Stimmung hat. Schon bei der Konzeption hatten wir viel Spass, und auch beim Coden haben wir uns über jeden funktionierenden Schritt gefreut.
 
 Das Thema der ausgestorbenen Tiere fanden wir beide von Anfang an spannend. Erst nach der Themenwahl haben wir genauer entschieden, welche Richtung unser Projekt nehmen soll. Das erste ausgestorbene Tier, das uns einfiel, war der Dino. Daraus entstand schnell die Idee, ihn zur Hauptfigur der Website zu machen. Die restliche Geschichte und die einzelnen Elemente entwickelten sich danach durch gemeinsames Brainstorming.
 
@@ -47,7 +47,7 @@ Tiere können bewusst nicht direkt aus der Regret List gelöscht werden, da dies
 
 ## Herausforderungen
 
-Während der Umsetzung gab es mehrere Herausforderungen. Ein erstes Problem war die API, da die Bildlinks nicht wie erwartet funktionierten. Deshalb mussten wir eine andere Lösung finden und die Wikipedia-Seiten der Tiere einbinden.
+Während der Umsetzung gab es mehrere Herausforderungen. Ein erstes Problem war die API, da die Bildlinks nicht wie erwartet funktionierten. Mithilfe der "iframe" funktion konnten wir das Problem beheben und stattdessen die Wikipedia-Seiten der Tiere einbinden.
 
 Schwierig war auch das Zusammenspiel der verschiedenen interaktiven Elemente. Der Kill-Button lädt ein neues Tier, der Regret-Button speichert das aktuell angezeigte Tier, und die Regret List muss diese gespeicherten Daten später wieder korrekt anzeigen. Dabei mussten wir darauf achten, dass die Buttons nach jedem Schritt wieder den richtigen Zustand haben.
 
@@ -55,7 +55,7 @@ Auch die Gestaltung für verschiedene Bildschirmgrössen brauchte viel Feinarbei
 
 Zu den Bugs gehörten zum Beispiel ein Regret-Button, der nach dem Laden eines neuen Tieres schwarz blieb, Hover-Bilder, die nicht sofort korrekt angezeigt wurden, und eine Animation, deren Grösse sich beim Öffnen verändert hat.
 
-Ausserdem war es schwierig, eine Lottie-Animation eines Dinos zu finden, die zu unserem Konzept passte. Wenn eine Animation gut gepasst hätte, war sie meistens kostenpflichtig. Im Nachhinein hätten wir uns vielleicht früher um den Dino kümmern sollen, da er eine sehr wichtige Rolle in unserem Konzept einnimmt. Trotzdem konnten wir am Ende eine gute Alternative finden. Eine eigene Animation zu erstellen erschien uns für dieses Projekt zu aufwendig.
+Ausserdem war es schwierig, eine Lottie-Animation eines Dinos zu finden, die zu unserem Konzept passte. Wenn eine Animation gut gepasst hätte, war sie meistens kostenpflichtig. Im Nachhinein hätten wir uns vielleicht früher um den Dino kümmern sollen, da er eine sehr wichtige Rolle in unserem Konzept einnimmt. Trotzdem konnten wir am Ende eine gute Alternative finden. Selbst erstellt haben wir als Lottie-Animation der Herz-Button zur Regret List, welcher beim draufklicken weiter auseinanderbricht.
 
 ## Zusammenarbeit und Arbeitsprozess
 
@@ -84,3 +84,5 @@ Uns gefällt vor allem die Kreativität unseres Konzeptes. Besonders spannend fi
 Wir finden, dass unsere Website bereits genügend Funktionen hat. Weiterentwickeln könnte man sie zum Beispiel, indem man anstelle der eingebundenen Wikipedia-Seite passende Bilder direkt in die Website integriert. Diese Bilder könnte man eventuell aus Wikipedia beziehen und mit den API-Daten verbinden.
 
 Eine weitere Idee wäre ein Button, mit dem man theoretisch die ganze Regret List löschen könnte. Diese Funktion könnte dann aber vom Dino blockiert werden, weil das Löschen der gespeicherten Tiere nicht zu seiner Intention passt. Der Kreativität wären hier keine Grenzen gesetzt.
+
+Auch unser beider Kreativität waren keine Grenzen gesetzt und wir hoffen euch gefällt unser Endprodukt.

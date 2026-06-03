@@ -142,3 +142,15 @@ if (speechNext) {
 }
 
 loadAnimals();
+
+const closeButton = document.querySelector("#closeLetterButton");
+
+if (closeButton) {
+  closeButton.addEventListener("mouseenter", () => {
+    closeButton.src = "SVGs/beashamedpink.svg";
+  });
+
+  closeButton.addEventListener("mouseleave", () => {
+    closeButton.src = "SVGs/beashamedbutton.svg";
+  });
+}
