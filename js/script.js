@@ -147,10 +147,10 @@ const closeButton = document.querySelector("#closeLetterButton");
 
 if (closeButton) {
   closeButton.addEventListener("mouseenter", () => {
-    closeButton.src = "SVGs/beashamedpink.svg";
+    closeButton.src = "svgs/beashamedpink.svg";
   });
 
   closeButton.addEventListener("mouseleave", () => {
-    closeButton.src = "SVGs/beashamedbutton.svg";
+    closeButton.src = "svgs/beashamedbutton.svg";
   });
 }

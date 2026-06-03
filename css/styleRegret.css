@@ -160,7 +160,7 @@ footer {
 }
 
 .regret-more:hover img {
-  content: url("../SVGs/hover/hoverregretmorebutton.svg");
+  content: url("../svgs/hover/hoverregretmorebutton.svg");
   transform: scale(1.05);
 }
 
@@ -170,14 +170,14 @@ footer {
 }
 
 .footer img {
-  content: url("/SVGs/beashamedbutton.svg");
+  content: url("../svgs/beashamedbutton.svg");
   width: 340px;
   max-width: 85vw;
   transition: transform 0.2s ease;
 }
 
 .footer:hover img {
-  content: url("../SVGs/hover/hoverbeashamedbutton.svg");
+  content: url("../svgs/hover/hoverbeashamedbutton.svg");
   transform: scale(1.05);
 }
 

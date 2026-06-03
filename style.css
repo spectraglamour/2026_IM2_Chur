@@ -159,7 +159,7 @@ h1 {
 }
 
 .kill-button:hover {
-  content: url("SVGs/hover/hoverkillagainbutton.svg");
+  content: url("../svgs/hover/hoverkillagainbutton.svg");
   transform: scale(1.05);
 }
 
@@ -227,7 +227,7 @@ h1 {
 }
 
 .footer:hover img {
-  content: url("SVGs/hover/hoverbeashamedbutton.svg");
+  content: url("../svgs/hover/hoverbeashamedbutton.svg");
   transform: scale(1.05);
 }
 

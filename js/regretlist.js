@@ -22,7 +22,7 @@ function renderRegretList() {
   savedAnimals.forEach(animal => {
     const skull = document.createElement("img");
     skull.classList.add("skull-icon");
-    skull.src = "SVGs/totenkopf.png";
+    skull.src = "svgs/totenkopf.png";
     skull.alt = "Totenkopf";  
 
     const card = document.createElement("div");
@@ -43,7 +43,7 @@ function renderRegretList() {
 
     const locationIcon = document.createElement("img");
     locationIcon.classList.add("location-icon");
-    locationIcon.src = "SVGs/pin.svg";
+    locationIcon.src = "svgs/pin.svg";
     locationIcon.alt = "Location";
 
     location.appendChild(locationIcon);
