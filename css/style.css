@@ -195,15 +195,6 @@ h1 {
   height: auto;
 }
 
-.heart-text {
-  position: absolute;
-  top: 82px;
-  left: 58px;
-  color: #b20000;
-  font-size: 14px;
-  font-weight: bold;
-}
-
 .regret-icon {
   position: absolute;
   width: 42px;
@@ -388,14 +379,6 @@ h1 {
   max-width: 85%;
 }
 }
-#list {
-  min-height: 80vh;
-  display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertikal */
-  text-align: center;
-}
-
 /* ---------- BRIEF OFFEN ---------- */
 
 body {
