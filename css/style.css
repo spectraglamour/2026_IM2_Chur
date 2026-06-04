@@ -183,15 +183,15 @@ h1 {
 }
 
 #heartImage {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .heart-wrap {
   position: relative;
   width: 100%;
-  max-width: 650px;
-  height: 460px;
+  max-width: 900px;
+  height: 637px;
   margin: 0 auto;
 }
 
@@ -233,7 +233,7 @@ h1 {
   position: relative;
   display: block;
   width: fit-content;
-  margin: 150px auto 0;
+  margin: 20px auto 0;
 }
 
 .footer img {
@@ -381,8 +381,8 @@ h1 {
 }
 
 .heart-wrap {
-  max-width: 360px;
-  height: 260px;
+  max-width: 500px;
+  height: 360px;
   margin: 0 auto;
 }
 
@@ -398,7 +398,7 @@ transform: translateY(-40px);
   bottom: auto;
   left: auto;
   transform: none;
-  margin: 100px auto 10px;
+  margin: 0 auto 10px;
   text-align: center;
   display: block;
   width: fit-content;
