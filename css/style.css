@@ -188,17 +188,26 @@ h1 {
 }
 
 .heart-wrap {
-  cursor: pointer;
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  height: 460px;
+  margin: 0 auto;
 }
 
 #heartAnimation {
   display: none;
-  width: 100%;
+  width: 150%;
+  margin-left: -90px;
+  margin-top: 0;
+  transform: translateY(-80px);
+  overflow: visible;
 }
 
 #heartAnimation svg {
   width: 100%;
   height: auto;
+  overflow: visible;
 }
 
 .heart-text {
@@ -372,13 +381,16 @@ h1 {
 }
 
 .heart-wrap {
-  max-width: 390px;
+  max-width: 360px;
+  height: 260px;
   margin: 0 auto;
 }
 
 #heartAnimation {
-  width: 100%;
-  margin: 0 auto;
+  width: 150%;
+margin-left: -15%;
+margin-top: 0px;
+transform: translateY(-40px);
 }
 
 .footer {
