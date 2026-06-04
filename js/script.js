@@ -140,11 +140,11 @@ if (speechNext) {
 
 if (closeButton) {
   closeButton.addEventListener("mouseenter", () => {
-    closeButton.src = "svgs/beashamedpink.svg";
+    closeButton.src = "SVGs/beashamedpink.svg";
   });
 
   closeButton.addEventListener("mouseleave", () => {
-    closeButton.src = "svgs/beashamedbutton.svg";
+    closeButton.src = "SVGs/beashamedbutton.svg";
   });
 }
 
