@@ -183,22 +183,26 @@ h1 {
 }
 
 .heart-wrap {
-  cursor: pointer;
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  height: 460px;
+  margin: 0 auto;
 }
 
 #heartAnimation {
   display: none;
-  width: 160%;
-  margin-left: -110px;
-margin-top: 0px;
-transform: translateY(-80px);
+  width: 150%;
+  margin-left: -90px;
+  margin-top: 0;
+  transform: translateY(-80px);
   overflow: visible;
 }
 
 #heartAnimation svg {
   width: 100%;
   height: auto;
-  overflow: visible
+  overflow: visible;
 }
 
 .heart-text {
@@ -372,12 +376,8 @@ transform: translateY(-80px);
 }
 
 .heart-wrap {
-<<<<<<< HEAD
   max-width: 360px;
   height: 260px;
-=======
-  max-width: 390px;
->>>>>>> 4b6f0a12514dd758e83c634a1b101d44aeff8901
   margin: 0 auto;
 }
 
