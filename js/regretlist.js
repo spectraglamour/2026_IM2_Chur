@@ -22,7 +22,7 @@ function renderRegretList() {
   savedAnimals.forEach(animal => {
     const skull = document.createElement("img");
     skull.classList.add("skull-icon");
-    skull.src = "SVGs/totenkopf.png";
+    skull.src = "svgs/totenkopf.png";
     skull.alt = "Totenkopf";  
 
     const card = document.createElement("div");
@@ -43,11 +43,15 @@ function renderRegretList() {
 
     const locationIcon = document.createElement("img");
     locationIcon.classList.add("location-icon");
-    locationIcon.src = "SVGs/pin.svg";
+    locationIcon.src = "svgs/pin.svg";
     locationIcon.alt = "Location";
 
+    const locationLabel = document.createElement("span");
+    locationLabel.classList.add("location-label");
+    locationLabel.innerText = `last located in ${animal.location}`;
+
     location.appendChild(locationIcon);
-    location.append(`last located in ${animal.location}`);
+    location.appendChild(locationLabel);
 
     infoBox.appendChild(lastRecord);
     infoBox.appendChild(location);  
@@ -57,6 +61,11 @@ function renderRegretList() {
     card.appendChild(infoBox);
 
     listElement.appendChild(card);
+
+    const locationLineHeight = parseFloat(getComputedStyle(location).lineHeight);
+    if (location.scrollHeight > locationLineHeight * 3.3) {
+      location.classList.add("location-small");
+    }
   });
 }
 
