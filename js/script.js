@@ -1,32 +1,29 @@
 const regretIcon = document.querySelector("#regretIcon");
-
-if (regretIcon) {
-  regretIcon.addEventListener("click", () => {
-    const isSaved = regretIcon.dataset.saved === "true";
-
-    if (isSaved) {
-      regretIcon.src = regretIcon.dataset.white;
-      regretIcon.dataset.saved = "false";
-    } else {
-      regretIcon.src = regretIcon.dataset.black;
-      regretIcon.dataset.saved = "true";
-      addAnimalToRegretList(currentAnimal);
-    }
-  });
-}
-
 const animalFrame = document.querySelector("#animalFrame");
 const killButton = document.querySelector(".kill-button");
 const speechText = document.querySelector("#speechText");
 const speechNext = document.querySelector("#speechNext");
+const closeButton = document.querySelector("#closeLetterButton");
 
 const API_URL = "https://extinct-api.herokuapp.com/api/v1/animal/";
+const STORAGE_KEY = "regretList";
 
 let animals = [];
 let currentAnimal = null;
 let speechStep = 0;
+let lastHateSentence = "";
 
-const STORAGE_KEY = "regretList";
+const hateSentences = [
+  "You didn't have to kill it.",
+  "Humans ruin everything.",
+  "Another one gone. Great job.",
+  "You call this progress?",
+  "Maybe stop destroying everything you touch.",
+  "I dont even have words for how much I hate you right now.",
+  "You, yeah you, human, you are a Looooooser.",
+  "You're a heartless creature",
+  "You are brutal, thank you for nothing."
+];
 
 function getRegretList() {
   return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
@@ -51,20 +48,6 @@ function addAnimalToRegretList(animal) {
   }
 }
 
-const hateSentences = [
-  "You didn't have to kill it.",
-  "Humans ruin everything.",
-  "Another one gone. Great job.",
-  "You call this progress?",
-  "Maybe stop destroying everything you touch.",
-  "I dont even have words for how much I hate you right now.",
-  "You, yeah you, human, you are a Looooooser.",
-  "You're a heartless creature",
-  "You are brutal, thank you for nothing."
-];
-
-let lastHateSentence = "";
-
 function resetRegretIcon() {
   if (!regretIcon) return;
 
@@ -86,18 +69,17 @@ function updateSpeech() {
   } else if (speechStep === 1) {
     speechText.innerText = `This species was last recorded in ${currentAnimal.lastRecord}.`;
   } else {
-let randomSentence;
+    let randomSentence;
 
-do {
-  randomSentence =
-    hateSentences[Math.floor(Math.random() * hateSentences.length)];
-} while (
-  hateSentences.length > 1 &&
-  randomSentence === lastHateSentence
-);
+    do {
+      randomSentence = hateSentences[Math.floor(Math.random() * hateSentences.length)];
+    } while (
+      hateSentences.length > 1 &&
+      randomSentence === lastHateSentence
+    );
 
-lastHateSentence = randomSentence;
-speechText.innerText = randomSentence;
+    lastHateSentence = randomSentence;
+    speechText.innerText = randomSentence;
   }
 }
 
@@ -128,6 +110,21 @@ async function loadAnimals() {
   }
 }
 
+if (regretIcon) {
+  regretIcon.addEventListener("click", () => {
+    const isSaved = regretIcon.dataset.saved === "true";
+
+    if (isSaved) {
+      regretIcon.src = regretIcon.dataset.white;
+      regretIcon.dataset.saved = "false";
+    } else {
+      regretIcon.src = regretIcon.dataset.black;
+      regretIcon.dataset.saved = "true";
+      addAnimalToRegretList(currentAnimal);
+    }
+  });
+}
+
 if (killButton) {
   killButton.addEventListener("click", () => {
     loadAnimals();
@@ -141,10 +138,6 @@ if (speechNext) {
   });
 }
 
-loadAnimals();
-
-const closeButton = document.querySelector("#closeLetterButton");
-
 if (closeButton) {
   closeButton.addEventListener("mouseenter", () => {
     closeButton.src = "SVGs/beashamedpink.svg";
@@ -154,3 +147,5 @@ if (closeButton) {
     closeButton.src = "SVGs/beashamedbutton.svg";
   });
 }
+
+loadAnimals();
